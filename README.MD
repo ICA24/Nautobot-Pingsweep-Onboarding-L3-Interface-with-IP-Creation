@@ -25,9 +25,11 @@ This script serves the following functions for Cisco Devices and **Nautobot vers
 - Ensure that all files from this repository are found in the directory of the python scripts including logs folder and CSV files.
 - Test script, verify logs, verify effects in Nautobot.
 - Allow user that will run the script rights to all files and execute permission for crontab. 777 is used only for example; this is not safe; please see [Ubuntu File Permissions KB](https://help.ubuntu.com/community/FilePermissions):
+
 `sudo chmod -R 777 /folder/to/script/`
 `sudo chmod -R +x folder/to/script/ `
 - Create cronjob to run pingsweep_with_import_of_devices_and_l3_interfaces.py periodically using documentation [CronHowTo](https://help.ubuntu.com/community/CronHowto) ; for example:
+
 `# m h dom  mon  dow command >> minute (0-59), hour (0-23, 0 = midnight), day (1-31), month (1-12), weekday (0-6, 0 = Sunday)`
 
 `0 17 * * 1-6 cd /datadrive/pingsweep-w-import/ && /datadrive/pingsweep-w-import/pingsweep_with_import_of_devices_and_l3_interfaces.py > /datadrive/pingsweep-w-import/logs/Cronjobs.log 2>&1`
