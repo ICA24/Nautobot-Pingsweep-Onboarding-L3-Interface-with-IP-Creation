@@ -29,4 +29,5 @@ This script serves the following functions for Cisco Devices and **Nautobot vers
 `sudo chmod -R +x folder/to/script/ `
 - Create cronjob to run pingsweep_with_import_of_devices_and_l3_interfaces.py periodically using documentation [CronHowTo](https://help.ubuntu.com/community/CronHowto) ; for example:
 `# m h dom  mon  dow command >> minute (0-59), hour (0-23, 0 = midnight), day (1-31), month (1-12), weekday (0-6, 0 = Sunday)`
+
 `0 17 * * 1-6 cd /datadrive/pingsweep-w-import/ && /datadrive/pingsweep-w-import/pingsweep_with_import_of_devices_and_l3_interfaces.py > /datadrive/pingsweep-w-import/logs/Cronjobs.log 2>&1`
