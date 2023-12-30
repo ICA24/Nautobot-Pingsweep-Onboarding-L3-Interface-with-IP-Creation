@@ -110,7 +110,7 @@ def get_interfaces_with_ip(ssh_client, result_file, failed_file, processed_ips):
 def check_is_primary(hostname, interface_name):
     ## Function to check if the interface is primary based on specific conditions
     if ((hostname.startswith("router") or hostname.startswith("ROUTER")) and "mgmt" in interface_name) or \
-       ((hostname.startswith("router") or hostname.startswith("ROUTER")) and "voice"  in hostname and "Lo" in interface_name) or \
+       ((hostname.startswith("router") or hostname.startswith("ROUTER")) and "hq"  in hostname and "Gi0/0" in interface_name) or \
        ((hostname.startswith("switch") or hostname.startswith("SWITCH") or hostname.startswith("Switch")) and "DISTR" in hostname and "VlanMGMT" in interface_name) or \
        ((hostname.startswith("switch") or hostname.startswith("SWITCH") or hostname.startswith("Switch")) and "ACC" not in hostname and "GigabitEthernet0/0" in interface_name):
         return "yes"
