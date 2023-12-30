@@ -27,6 +27,7 @@ This script serves the following functions for Cisco Devices and **Nautobot vers
 - Allow user that will run the script rights to all files and execute permission for crontab. 777 is used only for example; this is not safe; please see [Ubuntu File Permissions KB](https://help.ubuntu.com/community/FilePermissions):
 
 `sudo chmod -R 777 /folder/to/script/`
+
 `sudo chmod -R +x folder/to/script/ `
 - Create cronjob to run pingsweep_with_import_of_devices_and_l3_interfaces.py periodically using documentation [CronHowTo](https://help.ubuntu.com/community/CronHowto) ; for example:
 
