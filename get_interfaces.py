@@ -1,7 +1,6 @@
 import csv
 import re
 from netmiko import ConnectHandler
-import pandas as pd
 from concurrent.futures import ThreadPoolExecutor
 import ipaddress
 import datetime
