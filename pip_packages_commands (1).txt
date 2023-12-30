@@ -1,0 +1,9 @@
+source path/to/your/venv/bin/activate
+pip3 install ipaddress --yes --quiet
+pip3 install datetime --yes --quiet
+pip3 install requests --yes --quiet
+pip3 install urllib3 --yes --quiet
+pip3 install pynautobot==1.5.1 --yes --quiet
+pip3 install netmiko --yes --quiet
+pip3 install nautobot-device-onboarding==1.2.0 netmiko --yes --quiet
+deactivate
